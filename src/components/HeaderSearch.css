@@ -1,0 +1,19 @@
+.header-search-dialog { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; border: 0; margin: 0; padding: 0; background: transparent; color: var(--color-text); }
+.header-search-dialog::backdrop { background: rgb(0 0 0 / 38%); }
+.header-search-panel { background: var(--color-surface); position: relative; padding: 76px 24px 100px; }
+.header-search-content { max-width: 600px; margin: 0 auto; }
+.header-search-content h2 { text-align: center; font-size: 26px; font-weight: 500; letter-spacing: 1px; margin: 0 0 32px; color: var(--color-heading); }
+.header-search-label { display: block; font-size: 14px; font-weight: 500; color: var(--color-heading); margin: 0 0 var(--space-2) var(--space-5); }
+.header-search-form { display: flex; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-pill); min-height: 58px; padding: 0 14px 0 24px; gap: 12px; }
+.header-search-form input { width: 100%; min-width: 0; border: 0; background: none; font: inherit; font-size: 15px; color: var(--color-heading); padding: 12px 0; }
+.header-search-form input:focus-visible { outline: none; }
+/* 입력칸 대신 둥근 상자의 테두리가 진해져 지금 입력 중인 곳을 알린다 */
+.header-search-form:focus-within { border-color: var(--color-heading); }
+.header-search-form button { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border: 0; background: none; cursor: pointer; color: var(--color-heading); }
+.header-search-keywords { margin-top: 36px; }
+.header-search-keywords h3 { font-size: 15px; font-weight: 500; margin: 0 0 16px; }
+.header-search-keywords > div { display: flex; flex-wrap: wrap; gap: 12px 22px; }
+.header-search-keywords button { background: none; border: 0; color: var(--color-text-weak); font: inherit; font-size: 13px; padding: 4px 0; cursor: pointer; }
+.header-search-keywords button:hover { color: var(--color-heading); text-decoration: underline; }
+.header-search-close { position: absolute; bottom: -24px; left: calc(50% - 24px); display: grid; place-items: center; width: 48px; height: 48px; border: 0; border-radius: var(--radius-round); background: var(--color-heading); color: var(--color-surface); cursor: pointer; }
+@media (max-width: 600px) { .header-search-panel { padding: 52px 24px 72px; } .header-search-content h2 { font-size: 24px; } }

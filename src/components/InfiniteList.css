@@ -1,0 +1,22 @@
+.infinite-list {
+  width: 100%;
+}
+
+.infinite-list-items {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* 바닥 감지 자리. 높이가 0 이면 관찰되지 않으므로 최소 높이를 둔다 */
+.infinite-list-more {
+  min-height: 48px;
+  padding: var(--space-4) 0;
+}
+
+.infinite-list-status {
+  color: var(--color-text-weak);
+  font-size: 13px;
+  margin: 0;
+  padding: var(--space-4) 0;
+  text-align: center;
+}

@@ -1,0 +1,72 @@
+.home { padding-top: 12px; }
+.home button { font: inherit; cursor: pointer; }
+.home-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; background: var(--color-beige); min-height: 440px; overflow: hidden; }
+.home-hero-copy { width: 52%; padding: 36px 24px 36px 56px; position: relative; z-index: 1; }
+.home-hero h1 { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.35; letter-spacing: -2px; margin: 0 0 22px; font-weight: 600; word-break: keep-all; max-width: 440px; }
+.home-description { font-size: 15px; line-height: 1.9; color: var(--color-brown); margin: 0 0 30px; word-break: keep-all; }
+.home-section { margin-top: 72px; }
+.home-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 28px; }
+.home-section-heading .eyebrow { color: var(--color-text-weak); margin-bottom: 10px; }
+.home h2 { color: var(--color-heading); font-size: 26px; font-weight: 500; letter-spacing: -0.8px; margin: 0; word-break: keep-all; }
+.home-text-button { border: 0; background: none; padding: 8px 0; font-size: 13px !important; white-space: nowrap; }
+.home-text-button:hover { text-decoration: underline; }
+.home-filters { display: flex; gap: 8px; margin-bottom: 24px; }
+.home-filters button { padding: 8px 20px; background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); font-size: 13px; }
+.home-filters button[aria-pressed='true'] { background: var(--color-heading); color: var(--color-surface); border-color: var(--color-heading); }
+.home-products { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.home-products .product-card-image-empty { display: grid; place-items: center; background: var(--color-cream); }
+.home-products .product-card-image-empty::after { content: '상품 이미지 준비 중'; font-size: 12px; color: var(--color-text-weak); }
+.home-care { margin-top: 80px; padding: 0; background: var(--color-green-pale); display: flex; align-items: center; gap: 0; min-height: 320px; }
+.home-care h2 { font-size: 26px; line-height: 1.5; }
+.home-care p:last-child { font-size: 13px; line-height: 1.8; color: var(--color-green); margin: 16px 0 0; word-break: keep-all; }
+.home-care .eyebrow { color: var(--color-green); margin-bottom: 12px; }
+@media (max-width: 900px) {
+  .home-hero { min-height: 410px; }
+  .home-care { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .home { padding-top: 0; }
+  .home-hero { grid-template-columns: 1fr; }
+  .home-hero h1 { font-size: 36px; }
+  .home-description { font-size: 13px; }
+  .home-section { margin-top: 48px; }
+  .home h2 { font-size: 22px; }
+  .home-section-heading { flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .home-products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; }
+  .home-products .product-card-name { font-size: 14px; }
+  .home-products .product-card-meta { font-size: 12px; }
+  .home-care { margin-top: 48px; }
+  .home-care h2 { font-size: 23px; }
+}
+.home-hero-cat { background: var(--color-green-pale); }
+.home-hero-sitter { background: var(--color-beige-pink); }
+.home-slide-controls { display: flex; gap: 10px; margin-top: 30px; }
+.home-slide-controls button { border: 1px solid var(--color-sand); background: transparent; padding: 6px 12px; border-radius: var(--radius-pill); font-size: 12px; }
+.home-slide-controls button[aria-pressed="true"] { background: var(--color-green-deep); color: var(--color-surface); }
+.home-category-group { border-top: 1px solid var(--color-border); padding: 24px 0; }
+.home-category-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.home-category-heading h3 { margin: 0; font-size: 19px; font-weight: 500; }
+.home-category-products .product-card-image-empty::after { content: 'PETTOPIA'; font-size: 9px; letter-spacing: 1px; }
+@media(max-width:1000px) { .home-category-products { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .home-hero h1 { font-size: 32px; } }
+
+
+.home-sitters-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; } .home-sitters-note { color: var(--color-text-weak); font-size: 13px; margin: -10px 0 24px; } .home-sitters-grid .sitter-card-body { flex-direction: column; } @media(max-width:1000px) { .home-sitters-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } } @media(max-width:500px) { .home-sitters-grid { grid-template-columns: 1fr; } }
+
+.home-category-products .product-rating { font-size: 11px; margin: 2px 0 6px; }
+
+/* 배너 사진은 전체 배경으로, 문구는 사진의 왼쪽 여백에 겹쳐 배치한다. */
+.home-hero, .home-care { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; min-width: 0; overflow: hidden; }
+.home-banner-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+.home-banner-image[hidden] { display: none; }
+.home-care-copy { position: relative; z-index: 1; width: 52%; padding: 32px 40px; }
+.home-care-copy .arrow-button { margin-top: 20px; }
+
+/* 작은 화면에서는 문구 아래에 사진을 분리해 피사체와 겹치지 않게 한다. */
+@media (max-width: 1000px) {
+  .home-hero, .home-care { aspect-ratio: auto; min-height: 0; }
+  .home-hero-copy, .home-care-copy { grid-row: 1; width: 100%; padding: 32px 28px; }
+  .home-hero h1 { max-width: none; font-size: clamp(28px, 4vw, 38px); }
+  .home-banner-image { position: static; grid-row: 2; height: auto; aspect-ratio: 1.8 / 1; object-fit: cover; object-position: right center; }
+  .home-care .home-banner-image { aspect-ratio: 2.5 / 1; }
+}

@@ -1,0 +1,12 @@
+.product-reviews { max-width: 960px; margin: 20px auto; }
+.product-review-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; justify-content: space-between; padding: 24px 0; border-bottom: 1px solid var(--color-border); }
+.product-review-item { border-bottom: 1px solid var(--color-border); padding: 24px 0; }
+.product-review-item > p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.product-review-item small { color: var(--color-text-weak); }
+.product-review-empty { padding: 48px 20px; text-align: center; background: var(--color-cream); }
+.product-review-form { display: grid; gap: 16px; margin-top: 36px; }
+.product-review-form textarea { min-height: 140px; padding: 16px; font: inherit; border: 1px solid var(--color-border); resize: vertical; }
+.product-review-form button { justify-self: start; background: var(--color-green-deep); color: var(--color-surface); padding: 12px 24px; border: 0; cursor: pointer; }
+.product-review-form button:disabled { opacity: .5; }
+
+.review-search { margin: 24px 0; padding: 24px; background: var(--color-cream); } .review-search label { display: block; margin-bottom: 12px; font-weight: 600; } .review-search form > div { display: flex; gap: 8px; flex-wrap: wrap; } .review-search input { flex: 1; min-width: 160px; padding: 12px; border: 1px solid var(--color-border); font: inherit; } .review-search button { padding: 10px 16px; border: 1px solid var(--color-border); background: var(--color-surface); cursor: pointer; } .review-search button[type=submit], .review-search form button:first-of-type { background: var(--color-green-deep); color: var(--color-surface); } .review-search-results a { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--color-border); } .review-search-results span { white-space: nowrap; font-size: 13px; }

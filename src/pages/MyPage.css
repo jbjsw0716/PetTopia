@@ -1,0 +1,240 @@
+.mypage {
+  max-width: 960px;
+  padding: var(--space-4) 0;
+}
+
+.mypage-locked {
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-error);
+  font-weight: 600;
+  margin: 0 0 var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+}
+
+.mypage-form {
+  max-width: 720px;
+}
+
+.mypage-section-title {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: var(--space-5) 0 var(--space-4) 0;
+  padding-bottom: var(--space-3);
+}
+
+.mypage-section-title:first-child {
+  margin-top: 0;
+}
+
+.mypage-input {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 15px;
+  padding: var(--space-3);
+  width: 100%;
+}
+
+.mypage-edit {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-heading);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-5);
+}
+
+.mypage-edit:hover {
+  background-color: var(--color-heading);
+  color: var(--color-surface);
+}
+
+.mypage-edit:disabled {
+  border-color: var(--color-border);
+  color: var(--color-text-weak);
+  cursor: not-allowed;
+}
+
+.mypage-edit:disabled:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text-weak);
+}
+
+.mypage-profile-list {
+  margin: 0;
+}
+
+.mypage-profile-row {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-2);
+}
+
+.mypage-profile-row dt {
+  color: var(--color-text-weak);
+  flex-shrink: 0;
+  font-size: 14px;
+  width: 96px;
+}
+
+.mypage-profile-row dd {
+  color: var(--color-heading);
+  font-size: 15px;
+  margin: 0;
+}
+
+.mypage-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.mypage-cancel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-heading);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 56px;
+  padding: 0 var(--space-6);
+}
+
+.mypage-cancel:hover {
+  background-color: var(--color-gray-pale);
+}
+
+.mypage-submit {
+  background-color: var(--color-heading);
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 56px;
+  padding: 0 var(--space-6);
+}
+
+.mypage-submit:hover {
+  background-color: var(--color-text);
+}
+
+.mypage-submit:disabled {
+  background-color: var(--color-text-weak);
+  cursor: not-allowed;
+}
+
+.mypage-submit-error {
+  color: var(--color-error);
+  font-weight: 600;
+  margin: var(--space-3) 0 0 0;
+}
+
+.mypage-success {
+  color: var(--color-heading);
+  font-weight: 600;
+  margin: var(--space-3) 0 0 0;
+}
+
+.mypage-summary-title {
+  color: var(--color-heading);
+  font-size: 24px;
+  font-weight: 600;
+  margin: var(--space-6) 0 var(--space-4) 0;
+}
+
+.mypage-areas {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* 상자 없이 윗선 하나로 영역을 나눈다 (테두리 최소) */
+.mypage-area {
+  border-top: 1px solid var(--color-heading);
+  padding-top: var(--space-3);
+}
+
+.mypage-area-head {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.mypage-area-title {
+  color: var(--color-heading);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mypage-area-count {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: var(--space-2);
+}
+
+.mypage-area-more {
+  color: var(--color-text-weak);
+  font-size: 14px;
+}
+
+.mypage-area-more:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}
+
+.mypage-area-empty {
+  color: var(--color-text-weak);
+  font-size: 15px;
+  margin: 0;
+  padding: var(--space-3) 0;
+}
+
+.mypage-area-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mypage-area-row {
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  font-size: 15px;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-2);
+}
+
+.mypage-area-id {
+  color: var(--color-text-weak);
+  flex-shrink: 0;
+  font-size: 14px;
+  width: 56px;
+}
+
+.mypage-area-main {
+  color: var(--color-heading);
+  flex: 1;
+}
+
+.mypage-area-sub {
+  color: var(--color-text-weak);
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.mypage-profile { display: block; position: relative; max-width: 720px; }
+.mypage-profile > .mypage-edit { position: absolute; top: 0; right: 0; margin: 0; }
+.mypage-profile > .mypage-section-title:first-child { padding-right: 90px; min-height: 44px; }

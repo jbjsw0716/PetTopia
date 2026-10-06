@@ -1,0 +1,60 @@
+.product-detail-tabs {
+  margin-top: 48px;
+}
+
+.product-detail-tabs [role='tablist'] {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+}
+
+.product-detail-tabs [role='tab'] {
+  background: var(--color-cream);
+  border: 0;
+  cursor: pointer;
+  flex: 1;
+  font: inherit;
+  padding: 18px 8px;
+}
+
+.product-detail-tabs [role='tab'][aria-selected='true'] {
+  background: var(--color-green-deep);
+  color: var(--color-surface);
+}
+
+.product-detail-tabs [role='tabpanel'] {
+  padding: 24px 0;
+}
+
+.product-tab-review {
+  border-bottom: 1px solid var(--color-border);
+  overflow-wrap: anywhere;
+  padding: 20px 0;
+  white-space: pre-wrap;
+}
+
+.product-tab-review-star {
+  color: var(--color-star);
+}
+
+.product-related {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* 추천 카드 사진은 칸 너비 대신 140px 정사각형에 베이지 테두리 8px 이다 */
+.product-related .product-card-image {
+  aspect-ratio: 1 / 1;
+  background: var(--color-cream);
+  box-sizing: border-box;
+  height: auto;
+  object-fit: cover;
+  padding: 8px;
+  width: min(100%, 140px);
+}
+
+@media (max-width: 600px) {
+  .product-related {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,52 @@
+/* 공통 값. 변수 이름은 바꾸지 않는다.
+   성격은 한 줄이다 — 라운드 0 · 테두리 최소 · 평면. 둥근 자리는 아래 --radius-* 넷뿐이다. */
+:root {
+  --color-border-strong: #757575;
+  /* 활성 메뉴·할인율 %·장바구니 배지 */
+  --color-primary: #fe5455;
+  /* 로고·h1 제목·프로모션 띠 배경 */
+  --color-heading: #1a1a1a;
+  --color-text: #353535;
+  /* #9a9a9a 는 흰 배경 대비가 2.8:1 이라 WCAG AA(4.5:1)에 미달한다.
+     #757575 는 흰 배경(4.61:1)에서만 넘고 헤더·푸터 미색 #faf9f6(4.38)·연회색 상자 #f4f4f4(4.19) 위에서는
+     미달이라 한 단계 내렸다 — 흰 5.02 · 미색 4.77 · 연회색 4.57 */
+  --color-text-weak: #6f6f6f;
+  /* 주요 색이 빨강이 되어 오류 빨강과 구분되지 않았다. 한 단계 진하게 내렸다 */
+  --color-error: #c81e1e;
+  --color-border: #e5e5e5;
+  --color-surface: #ffffff;
+
+  /* 팀원 화면(홈·기획전·리뷰·문의·도우미·예약)의 팔레트. 값은 팀원이 정한 그대로이고 이름만 붙였다.
+     녹색 계열은 돌봄·펫시터, 갈색 계열은 홈 배너 문구·검정 버튼 hover 에 쓴다 */
+  --color-green-deep: #242922;
+  --color-green: #59634f;
+  --color-green-strong: #465b31;
+  --color-green-pale: #edf0e9;
+  --color-brown: #655f54;
+  --color-brown-deep: #453e34;
+  --color-brown-accent: #ad7352;
+  --color-sand: #b9b3a8;
+  --color-beige: #f4eddf;
+  --color-beige-pink: #f1e5df;
+  /* 헤더·푸터 미색. 탭·빈 안내·검색 상자 같은 옅은 바탕도 이 값으로 합쳤다 */
+  --color-cream: #faf9f6;
+  /* 사진 자리·정보 상자 같은 무채색 옅은 바탕 */
+  --color-gray-pale: #f4f4f4;
+  --color-star: #e3ad16;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* 입력칸·버튼·카드의 기본 모서리. 모서리를 되살릴 자리가 생기면 여기만 고친다 */
+  --radius-md: 0;
+  /* 둥근 자리 넷 — 문의 창 · 도우미 패널 · 알약형 단추와 딱지 · 원형 배지와 화살표 */
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+  --content-max-width: 1280px;
+}

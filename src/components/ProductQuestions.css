@@ -1,0 +1,26 @@
+.question-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.question-heading h2 { font-size: 18px; font-weight: 600; }
+.question-heading button { border: 0; background: none; color: var(--color-text-weak); cursor: pointer; text-decoration: underline; }
+.question-filters { display: grid; gap: 14px; margin: 12px 0; font-size: 13px; color: var(--color-text-weak); }
+.question-filters select { width: 100%; padding: 11px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: inherit; }
+.question-filters label:last-child { display: flex; align-items: center; gap: 8px; }
+.question-row { border-bottom: 1px solid var(--color-border); padding: 20px 0; font-size: 14px; }
+.question-row small { color: var(--color-text-weak); font-size: 12px; }
+.question-row p { margin: 8px 0; }
+.question-row summary { display: grid; gap: 6px; position: relative; cursor: pointer; padding-right: 28px; list-style: none; }
+.question-row summary::-webkit-details-marker { display: none; }
+.question-row summary::after { content: '⌄'; position: absolute; right: 4px; top: 16px; }
+.question-row[open] summary::after { content: '⌃'; }
+.question-row strong { font-weight: 500; }
+.question-answer { padding: 18px; margin-top: 16px; background: var(--color-cream); white-space: pre-wrap; overflow-wrap: anywhere; }
+.question-write { display: block; text-align: center; border: 1px solid var(--color-border); padding: 13px; margin-top: 24px; font-size: 13px; }
+.question-dialog { position: fixed; inset: 0; margin: auto; width: min(480px,calc(100vw - 24px)); max-height: 85dvh; padding: 20px; border: 0; border-radius: var(--radius-sm); }
+.question-dialog[open] { display: flex; flex-direction: column; }
+.question-dialog::backdrop { background: #0006; }
+.question-dialog-list { overflow-y: auto; min-height: 0; }
+.question-dialog .question-write { background: var(--color-heading); color: var(--color-surface); flex-shrink: 0; margin-top: 16px; }
+.question-count { color: var(--color-text-weak); font-size: 13px; }
+/* '문의 분류' 이름표는 화면에 보인다 — placeholder 만으로 설명하지 않는다 */
+.question-filter-label { display: grid; gap: 6px; }
+
+.question-dialog .question-heading button { text-decoration: none; width: 32px; height: 32px; font-size: 20px; }

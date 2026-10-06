@@ -1,0 +1,150 @@
+.product-list {
+  padding: var(--space-4) 0;
+}
+
+.product-list-head {
+  margin-bottom: var(--space-5);
+}
+
+.product-list-condition {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 0;
+}
+
+.product-list-count {
+  font-size: 14px;
+  font-weight: 600;
+  margin: var(--space-1) 0 0 0;
+}
+
+.product-list-mock-error {
+  color: var(--color-error);
+  font-size: 14px;
+  margin: var(--space-3) 0;
+}
+
+.product-list-body {
+  align-items: start;
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: minmax(0, 1fr) 240px;
+  grid-template-rows: auto;
+}
+
+.product-list-main {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.product-list-search-label {
+  color: var(--color-heading);
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.product-list-search-row {
+  display: flex;
+}
+
+.product-list-search-input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+}
+
+/* 주요 버튼과 같은 색 — 배경 heading · 흰 글자 */
+.product-list-search-button {
+  background-color: var(--color-heading);
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 var(--space-4);
+}
+
+.product-list-search-button:hover {
+  background-color: var(--color-text);
+}
+
+.product-list-search-note {
+  color: var(--color-text-weak);
+  font-size: 13px;
+  margin: var(--space-2) 0 0 0;
+}
+
+.product-list-search-clear {
+  background: none;
+  border: 0;
+  color: var(--color-text-weak);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  margin-top: var(--space-2);
+  padding: 0;
+  text-decoration: underline;
+}
+
+.product-list-search-clear:hover {
+  color: var(--color-heading);
+}
+
+/* InfiniteList 는 배치를 열어 두고 있다(display: grid 와 간격만 갖는다).
+   열 수는 화면이 정한다 — 한 묶음 12개가 4열로도 나누어떨어진다.
+   duit.kr 실측을 따라 4열, 간격은 가로 24px · 세로 64px 이다.
+   세로가 가로보다 훨씬 넓은 것이 그 사이트 목록의 인상을 만든다 */
+.product-list .infinite-list-items {
+  gap: 64px var(--space-5);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-list-filter {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+
+.product-list-filter-title {
+  color: var(--color-heading);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.product-list-filter-option {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  gap: var(--space-2);
+}
+
+.product-list-sort {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 14px;
+  padding: var(--space-2);
+  width: 100%;
+}
+
+.product-filter-sidebar { position: sticky; top: calc(var(--header-height, 120px) + 16px); grid-column: 2; grid-row: 1; max-height: calc(100dvh - var(--header-height, 120px) - 32px); overflow-y: auto; background: var(--color-surface); padding: 2px; }
+.product-filter-toggle { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; padding: 12px 0; margin-bottom: 16px; border: 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface); font: inherit; font-size: 13px; cursor: pointer; }
+.product-filter-toggle span { font-size: 11px; white-space: nowrap; }
+.product-filter-sidebar .filter-panel { width: 100%; margin-top: 24px; }
+@media(max-width:700px) { .product-list-body { grid-template-columns: minmax(0,1fr); } .product-filter-sidebar { grid-column: 1; grid-row: 1; z-index: 10; } .product-list-main { grid-row: 2; } .product-list .infinite-list-items { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+

@@ -1,0 +1,95 @@
+.review-write {
+  padding: var(--space-4) 0;
+}
+
+/* 대상 예약 — 바꿀 수 없는 값이라 입력칸과 다른 옅은 바탕에 둔다 (주문 완료의 요약 자리와 같은 모양) */
+.review-write-target {
+  background-color: var(--color-gray-pale);
+  margin: var(--space-4) 0 var(--space-5) 0;
+  max-width: 720px;
+  padding: var(--space-4);
+}
+
+.review-write-target-main {
+  color: var(--color-heading);
+  font-weight: 600;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.review-write-target-sub {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 0;
+}
+
+.review-write-form {
+  max-width: 720px;
+}
+
+.review-write-select,
+.review-write-textarea {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 15px;
+  padding: var(--space-3);
+  width: 100%;
+}
+
+.review-write-textarea {
+  resize: vertical;
+}
+
+.review-write-submit-error {
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-weight: 600;
+  margin: 0 0 var(--space-4) 0;
+  padding: var(--space-3);
+}
+
+.review-write-actions {
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-4);
+  justify-content: flex-end;
+  padding-top: var(--space-5);
+}
+
+.review-write-cancel {
+  color: var(--color-text-weak);
+}
+
+.review-write-cancel:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}
+
+/* 주요 버튼은 검정이다 */
+.review-write-submit {
+  background-color: var(--color-heading);
+  border: 1px solid var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 56px;
+  min-width: 160px;
+  padding: 0 var(--space-6);
+}
+
+.review-write-submit:hover:enabled {
+  filter: brightness(0.94);
+}
+
+/* 처리 중 상태를 기본·비활성과 구분해 보이게 한다 */
+.review-write-submit:disabled {
+  background-color: var(--color-border);
+  border-color: var(--color-border);
+  color: var(--color-text-weak);
+  cursor: not-allowed;
+}

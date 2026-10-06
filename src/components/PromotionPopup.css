@@ -1,0 +1,7 @@
+.promotion-popup { position: fixed; inset: 0; margin: auto; width: min(420px, calc(100vw - 32px)); padding: 42px 32px 24px; border: 0; background: var(--color-beige); color: var(--color-green-deep); }
+.promotion-popup::backdrop { background: #171d2459; }
+.promotion-popup h2 { font-size: 32px; line-height: 1.4; }
+.popup-close { position: absolute; right: 14px; top: 12px; border: 0; background: transparent; font-size: 20px; cursor: pointer; }
+.popup-symbol { font-size: 64px; color: var(--color-brown-accent); }
+.popup-today { display: flex; align-items: center; gap: 8px; margin-top: 24px; font-size: 13px; }
+.popup-error { margin-top: 12px; font-size: 13px; color: var(--color-error); }

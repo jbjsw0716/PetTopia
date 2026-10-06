@@ -1,0 +1,114 @@
+.reservation-detail {
+  padding: var(--space-4) 0;
+}
+
+/* 예약 목록 카드와 같은 모양이다. 목록 CSS 를 빌리지 않고 이 화면이 갖는다 */
+.reservation-detail-card {
+  align-items: start;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.reservation-detail-card h2 {
+  font-size: 21px;
+}
+
+.reservation-detail-card small {
+  color: var(--color-text-weak);
+}
+
+@media (max-width: 600px) {
+  .reservation-detail-card {
+    flex-direction: column;
+  }
+}
+
+.reservation-detail-cancel-error {
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-weight: 600;
+  margin: 16px 0;
+  padding: 12px;
+}
+
+.reservation-detail-cancel-note {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+.reservation-detail-cancel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 16px 0;
+  padding: 12px 32px;
+}
+
+.reservation-detail-cancel:hover {
+  background-color: var(--color-error);
+  color: var(--color-surface);
+}
+
+.reservation-detail-cancel-area {
+  margin: 16px 0;
+}
+
+/* 취소를 마친 뒤에도 눈에 띄는 변화가 있어야 한다 — 버튼이 있던 자리에
+   검정 바탕 띠가 나타난다(새 색을 만들지 않고 OrderCompletePage 의 주요 버튼과 같은
+   --color-heading 배경을 재사용) */
+@keyframes reservation-detail-cancel-success-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reservation-detail-cancel-success {
+  animation: reservation-detail-cancel-success-in 0.25s ease-out;
+  background-color: var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 16px 0;
+  padding: 14px 20px;
+}
+
+.reservation-sitter-summary {
+  background: var(--color-cream);
+  margin-top: 28px;
+  padding: 24px;
+}
+
+.reservation-sitter-summary dl {
+  display: grid;
+  gap: 12px;
+}
+
+.reservation-sitter-summary dl > div {
+  display: flex;
+  gap: 24px;
+}
+
+.reservation-sitter-summary dt {
+  color: var(--color-text-weak);
+  min-width: 110px;
+}
+
+.reservation-sitter-summary dd {
+  margin: 0;
+}

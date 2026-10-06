@@ -1,0 +1,131 @@
+/* 상품 목록과 같은 배치: 목록 + 오른쪽 필터 */
+.sitter-list {
+  padding: var(--space-4) 0;
+}
+
+.sitter-list-head {
+  margin-bottom: var(--space-5);
+}
+
+.sitter-list-condition {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 0;
+}
+
+.sitter-list-count {
+  font-size: 14px;
+  font-weight: 600;
+  margin: var(--space-1) 0 0 0;
+}
+
+.sitter-list-search {
+  align-items: center;
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  max-width: 480px;
+}
+
+.sitter-list-search-label {
+  color: var(--color-heading);
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sitter-list-search-input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+}
+
+.sitter-list-search-button {
+  background-color: var(--color-heading);
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+}
+
+.sitter-list-search-button:hover {
+  background-color: var(--color-text);
+}
+
+.sitter-list-search-clear {
+  background: none;
+  border: 0;
+  color: var(--color-text-weak);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.sitter-list-body {
+  align-items: start;
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: minmax(0, 1fr) 240px;
+}
+
+.sitter-list-main {
+  min-width: 0;
+}
+
+/* 가로로 긴 카드라 3열이다. 한 묶음 12명이 3열로 나누어떨어진다 */
+.sitter-list .infinite-list-items {
+  gap: 0 var(--space-5);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sitter-list-filter {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+
+.sitter-list-filter-title {
+  color: var(--color-heading);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.sitter-list-filter-option {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  gap: var(--space-2);
+}
+
+.sitter-filter-sidebar { position: sticky; top: calc(var(--header-height,120px) + 16px); background: var(--color-surface); padding: 2px; }
+.sitter-filter-toggle { display: flex; justify-content: space-between; gap: 8px; width: 100%; padding: 8px 0; border: 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface); font-size: 13px; cursor: pointer; }
+.sitter-filter-toggle span { font-size: 11px; white-space: nowrap; }
+.sitter-filter-sidebar .sitter-list-search { flex-wrap: wrap; margin: 12px 0; gap: 6px; }
+.sitter-filter-sidebar .sitter-list-search-label { width: 100%; }
+.sitter-filter-sidebar .filter-panel { width: 100%; }
+@media(max-width:700px) { .sitter-list-body { grid-template-columns: minmax(0,1fr); } .sitter-filter-sidebar { grid-row: 1; z-index: 10; } .sitter-list .infinite-list-items { grid-template-columns: 1fr; } }
+
+.sitter-filter-sidebar .filter-panel-head { padding-bottom: 8px; }
+.sitter-filter-sidebar .filter-panel-body { gap: 12px; padding-top: 10px; }
+.sitter-filter-sidebar .sitter-list-filter { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 8px; }
+.sitter-filter-sidebar .sitter-list-filter-title { margin-bottom: 6px; }
+.sitter-filter-sidebar .sitter-list-filter-option { font-size: 12px; min-height: 24px; gap: 4px; }
+.sitter-list-sort { display: grid; gap: 6px; }
+.sitter-list-sort select { width: 100%; padding: 8px; font: inherit; font-size: 13px; color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); }
+.sitter-list-sort p { margin: 0; font-size: 11px; color: var(--color-text-weak); }
+@media(max-height:850px), (max-width:700px) { .sitter-filter-sidebar { position: static; } }

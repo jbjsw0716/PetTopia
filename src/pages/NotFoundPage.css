@@ -1,0 +1,9 @@
+.not-found {
+  padding: var(--space-4) 0;
+}
+
+.not-found-link {
+  display: inline-block;
+  margin-top: var(--space-4);
+  color: var(--color-primary);
+}

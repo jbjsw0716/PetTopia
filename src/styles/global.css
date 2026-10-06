@@ -1,0 +1,83 @@
+/* 기본 스타일. 최소 기준만 둔다 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 글꼴은 index.html 이 https 로 불러온다.
+   Montserrat 이 영문·숫자를, Pretendard 가 한글을 맡는다 — Montserrat 에 한글 자형이 없어
+   브라우저가 한글만 자동으로 다음 글꼴에 넘긴다.
+   뒤의 둘은 글꼴을 받지 못했을 때를 위해 남겨 둔다 */
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: Montserrat, Pretendard, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* body 기본 글자 크기는 일부러 두지 않는다.
+   타이포는 카드·버튼·제목에서 자리별로 맞춘다 */
+h1 {
+  color: var(--color-heading);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 포커스 표시. '누를 때마다 뜨는 빨간 외곽선' 이 불편하다. 그래서 브라우저 기본
+   외곽선은 끄고, 두 가지만 다시 둔다.
+   (1) 링크·버튼·체크박스처럼 마우스로 누를 때는 :focus-visible 이 켜지지 않는 요소 —
+       Tab 으로 옮길 때만 제목 글자색(검정) 외곽선이 보인다. 빨강은 쓰지 않는다.
+   (2) 글자를 입력하는 칸·선택 상자 — 외곽선 대신 테두리 자리에 1px 검정 선이 겹쳐
+       '테두리 색이 바뀐' 것처럼 보인다 (예약서 입력칸과 같은 모양).
+   :where() 로 묶어 우선순위를 낮게 둔다 — 화면 CSS 가 자기 칸을 따로 정하면 그쪽이 이긴다. */
+:focus {
+  outline: none;
+}
+
+:where(a, button, summary, input[type='checkbox'], input[type='radio']):focus-visible {
+  outline: 2px solid var(--color-heading);
+  outline-offset: 2px;
+}
+
+:where(input:not([type='checkbox'], [type='radio']), select, textarea):focus {
+  outline: 1px solid var(--color-heading);
+  outline-offset: -1px;
+}
+
+/* 여러 화면이 함께 쓰는 둘 — 제목 위 작은 대문자 이름표, 글자와 ↗ 화살표를 띄운 검정 이동 버튼.
+   홈·홈 팝업·기획전·상품 리뷰·추천 도우미가 쓴다. 화면 안에서의 색·여백 조정은 그 화면 CSS 가 자기 이름 아래에서 한다 */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+}
+
+.arrow-button {
+  align-items: center;
+  background: var(--color-heading);
+  border: 1px solid var(--color-heading);
+  color: var(--color-surface);
+  display: inline-flex;
+  /* 홈의 .home button { font: inherit } 가 글자 크기를 지우지 않게 */
+  font-size: 14px !important;
+  gap: 30px;
+  padding: 15px 22px;
+}
+
+.arrow-button:hover {
+  background: var(--color-brown-deep);
+}
+
+@media (max-width: 600px) {
+  .eyebrow {
+    font-size: 10px;
+  }
+}

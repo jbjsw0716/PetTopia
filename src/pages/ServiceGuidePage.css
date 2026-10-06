@@ -1,0 +1,138 @@
+.service-guide {
+  max-width: 960px;
+  padding: var(--space-4) 0;
+}
+
+.service-guide-flow-title {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 var(--space-3) 0;
+}
+
+.service-guide-flow {
+  align-items: center;
+  border-bottom: 1px solid var(--color-heading);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0 0 var(--space-5) 0;
+  padding: 0 0 var(--space-4) 0;
+}
+
+.service-guide-flow-step {
+  align-items: center;
+  color: var(--color-heading);
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  gap: var(--space-2);
+}
+
+.service-guide-flow-number {
+  align-items: center;
+  background-color: var(--color-heading);
+  color: var(--color-surface);
+  display: inline-flex;
+  font-size: 13px;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.service-guide-services {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 상자 없이 윗선 하나로 서비스를 나눈다 (테두리 최소) */
+.service-guide-service {
+  border-top: 1px solid var(--color-heading);
+  padding-top: var(--space-4);
+}
+
+.service-guide-service-name {
+  color: var(--color-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 var(--space-3) 0;
+}
+
+.service-guide-facts {
+  display: grid;
+  gap: var(--space-2) var(--space-4);
+  grid-template-columns: auto 1fr;
+  margin: 0;
+}
+
+.service-guide-facts dt {
+  color: var(--color-text-weak);
+  font-size: 14px;
+}
+
+.service-guide-facts dd {
+  color: var(--color-text);
+  font-size: 15px;
+  margin: 0;
+}
+
+.service-guide-note {
+  background-color: var(--color-gray-pale);
+  color: var(--color-text);
+  font-size: 14px;
+  margin: var(--space-5) 0;
+  padding: var(--space-3) var(--space-4);
+}
+
+.service-guide-usage-title {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: var(--space-3);
+}
+
+.service-guide-usage-list {
+  margin: 0;
+}
+
+.service-guide-usage-item {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-2);
+}
+
+.service-guide-usage-item dt {
+  color: var(--color-heading);
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+}
+
+.service-guide-usage-item dd {
+  color: var(--color-text);
+  font-size: 15px;
+  margin: 0;
+}
+
+.service-guide-action {
+  background-color: var(--color-heading);
+  color: var(--color-surface);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: var(--space-5);
+  padding: var(--space-4) var(--space-6);
+}
+
+.service-guide-action:hover {
+  background-color: var(--color-text);
+}

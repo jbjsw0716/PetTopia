@@ -1,0 +1,26 @@
+.scroll-buttons {
+  bottom: var(--space-6);
+  position: fixed;
+  right: var(--space-6);
+  z-index: 80;
+}
+
+.scroll-buttons-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  height: 40px;
+  line-height: 1;
+  width: 40px;
+}
+
+.scroll-buttons-item:hover {
+  border-color: var(--color-heading);
+  color: var(--color-heading);
+}
+
+@media(max-width:600px) { .scroll-buttons { right: 16px; bottom: 20px; } }

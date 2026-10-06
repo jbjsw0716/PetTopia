@@ -1,0 +1,123 @@
+/* 정보 영역은 주문 완료(OrderCompletePage.css), 취소 영역은 예약 상세(ReservationDetailPage.css)와 같은
+   모양이지만 그 클래스를 직접 쓰지 않는다 — 한쪽을 고칠 때 이 화면이 모르게 바뀌지 않게 한다 */
+.order-detail {
+  padding: var(--space-4) 0;
+}
+
+.order-detail-meta {
+  background-color: var(--color-gray-pale);
+  margin: var(--space-4) 0 var(--space-6) 0;
+  padding: var(--space-4);
+}
+
+.order-detail-meta-row {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.order-detail-term {
+  color: var(--color-text-weak);
+  flex-shrink: 0;
+  width: 88px;
+}
+
+.order-detail-desc {
+  margin: 0;
+}
+
+.order-detail-section {
+  flex: 1;
+  margin-bottom: var(--space-6);
+  min-width: 0;
+}
+
+.order-detail-section-title {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  font-size: 16px;
+  margin: 0 0 var(--space-4) 0;
+  padding-bottom: var(--space-2);
+}
+
+.order-detail-columns {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.order-detail-shipping {
+  margin: 0;
+}
+
+.order-detail-actions {
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-4);
+  justify-content: space-between;
+  padding-top: var(--space-5);
+}
+
+.order-detail-back {
+  color: var(--color-text-weak);
+}
+
+.order-detail-back:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}
+
+/* 주문 취소 — 되돌릴 수 없는 동작이라 빨강 테두리로 둔다 (예약 상세 취소 버튼과 같은 모양) */
+.order-detail-cancel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: var(--space-3) var(--space-6);
+}
+
+.order-detail-cancel:hover {
+  background-color: var(--color-error);
+  color: var(--color-surface);
+}
+
+.order-detail-cancel-area {
+  margin: var(--space-4) 0;
+}
+
+.order-detail-cancel-error {
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-weight: 600;
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+}
+
+/* 취소를 마친 뒤 버튼이 있던 자리에 검정 바탕 띠가 나타난다 — 팝업 대신 이 화면 안에서
+   눈에 띄는 변화를 준다 (예약 상세의 ✓ 띠와 같은 모양) */
+@keyframes order-detail-cancel-success-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-detail-cancel-success {
+  animation: order-detail-cancel-success-in 0.25s ease-out;
+  background-color: var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  padding: var(--space-3) var(--space-5);
+}

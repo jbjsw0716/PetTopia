@@ -1,0 +1,53 @@
+.wishlist {
+  padding: var(--space-4) 0;
+}
+
+.wishlist-count {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: var(--space-1) 0 var(--space-5) 0;
+}
+
+/* 카드 격자 — 상품 목록과 같은 4열 · 세로가 넓은 간격을 쓴다.
+   모바일 대응은 구현하지 않는다 */
+.wishlist-cards {
+  display: grid;
+  gap: 64px var(--space-5);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* 기초 데이터에서 사라진 상품의 자리 — '상품 정보 없음' 과 찜 해제.
+   상품 카드와 같은 자리·크기로 두어 격자가 흐트러지지 않게 한다 */
+.wishlist-missing-image {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-border);
+}
+
+.wishlist-missing-name {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 400;
+  margin: var(--space-3) 0 var(--space-1) 0;
+}
+
+.wishlist-missing-text {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 0 0 var(--space-3) 0;
+}
+
+.wishlist-missing-unwish {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-heading);
+  cursor: pointer;
+  font-size: 14px;
+  padding: var(--space-2) var(--space-3);
+}
+
+.wishlist-save-error {
+  color: var(--color-error);
+  font-size: 14px;
+  margin-top: var(--space-5);
+}

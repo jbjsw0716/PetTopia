@@ -1,0 +1,58 @@
+.order-list {
+  padding: var(--space-4) 0;
+}
+
+.order-list-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+/* 위쪽 선 하나로 카드끼리 구분한다 (테두리 최소) */
+.order-card {
+  border-top: 2px solid var(--color-heading);
+  padding: var(--space-4) 0;
+}
+
+.order-card-head {
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+}
+
+.order-card-id {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-card-date {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  /* 상태 배지를 오른쪽 끝으로 민다 */
+  margin-right: auto;
+}
+
+/* 금액 요약은 카드 오른쪽에 붙인다.
+   너비를 여기서 정하고 공통 UI 의 클래스(.price-summary)를 건드리지 않는다 —
+   공통 UI 스타일은 컴포넌트 옆 CSS 가 관리한다 */
+.order-card-summary {
+  margin-left: auto;
+  margin-top: var(--space-4);
+  width: 300px;
+}
+
+.order-list-continue {
+  color: var(--color-text-weak);
+  display: inline-block;
+  margin-top: var(--space-5);
+}
+
+.order-list-continue:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}

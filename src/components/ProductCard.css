@@ -1,0 +1,103 @@
+/* 카드는 테두리 0 · 라운드 0 · 패딩 0 · 배경 투명이다. 카드를 감싸던 상자를 걷어내면
+   사진이 격자를 만들고 글자가 그 아래 붙는다. */
+.product-card {
+  position: relative;
+}
+
+/* 테두리가 없어 hover 를 테두리 색으로 알릴 수 없다. 상품명에 밑줄을 준다 */
+.product-card:hover .product-card-name {
+  text-decoration: underline;
+}
+
+.product-card-body {
+  display: block;
+}
+
+.product-card-image {
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-card-image-empty {
+  background-color: var(--color-gray-pale);
+}
+
+.product-card-name {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 400;
+  margin: var(--space-3) 0 var(--space-1) 0;
+}
+
+.product-card-meta {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.product-card-price {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+/* 금액은 한 덩어리로 읽혀야 한다. 카드가 좁아도 '16,000' 과 '원' 이 갈라지지 않게 한다 */
+.product-card-price > span {
+  white-space: nowrap;
+}
+
+.product-card-price-origin {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.product-card-price-sale {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-card-discount {
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 사진 위에 얹히는 단추라 테두리 대신 흰 배경으로 자리를 알린다 */
+.product-card-wish {
+  align-items: center;
+  background-color: var(--color-surface);
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--color-text-weak);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.product-card-wish.is-wished {
+  color: var(--color-primary);
+}
+
+.product-card-wish:disabled {
+  color: var(--color-border);
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+/* 하트 저장 실패 안내 — 누른 카드 바로 아래에 둔다 */
+.product-card-wish-error {
+  color: var(--color-error);
+  font-size: 13px;
+  margin: var(--space-2) 0 0 0;
+}

@@ -1,0 +1,62 @@
+.policy {
+  max-width: 800px;
+  padding: var(--space-4) 0;
+}
+
+/* 지금 보는 글의 탭은 NavLink 가 붙이는 active 로 표시한다 */
+.policy-tabs {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-5);
+}
+
+.policy-tab {
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-weak);
+  font-size: 15px;
+  margin-bottom: -1px;
+  padding: var(--space-3) var(--space-4);
+}
+
+.policy-tab:hover {
+  color: var(--color-heading);
+}
+
+.policy-tab.active {
+  border-bottom-color: var(--color-heading);
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.policy-title {
+  margin: 0 0 var(--space-4) 0;
+}
+
+.policy-intro,
+.policy-text,
+.policy-list {
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.policy-intro {
+  margin-bottom: var(--space-5);
+}
+
+.policy-section {
+  margin-bottom: var(--space-5);
+}
+
+.policy-section-title {
+  color: var(--color-heading);
+  font-size: 16px;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.policy-list {
+  padding-left: 1.25em;
+}

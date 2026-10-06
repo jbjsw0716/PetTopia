@@ -1,0 +1,39 @@
+.notice-detail {
+  max-width: 800px;
+  padding: var(--space-4) 0;
+}
+
+.notice-detail-title {
+  margin-bottom: var(--space-2);
+}
+
+.notice-detail-date {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: 0;
+  padding-bottom: var(--space-3);
+}
+
+/* 본문은 길어도 잘리지 않고 줄바꿈이 그대로 보인다 */
+.notice-detail-body {
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: var(--space-5) 0;
+  white-space: pre-line;
+}
+
+.notice-detail-back {
+  border: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-5);
+}
+
+.notice-detail-back:hover {
+  background-color: var(--color-heading);
+  color: var(--color-surface);
+}

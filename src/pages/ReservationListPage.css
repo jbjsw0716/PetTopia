@@ -1,0 +1,10 @@
+.reservation-list { max-width: 1000px; padding: 24px 0; }
+/* 후기 등록 결과 안내 — 예약 상세의 취소 완료 띠와 같은 모양이다 */
+.reservation-list-notice { background-color: var(--color-heading); border-radius: var(--radius-md); color: var(--color-surface); font-size: 15px; font-weight: 600; margin: 16px 0; padding: 14px 20px; }
+.reservation-list-toolbar { display: flex; justify-content: space-between; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--color-border); flex-wrap: wrap; }
+.reservation-card { display: flex; align-items: start; justify-content: space-between; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--color-border); }
+.reservation-card h2 { font-size: 21px; }
+.reservation-card small { color: var(--color-text-weak); }
+.reservation-card-actions { display: flex; align-items: end; flex-direction: column; gap: 32px; }
+.reservation-empty { padding: 60px 20px; background: var(--color-cream); text-align: center; }
+@media(max-width:600px) { .reservation-card { flex-direction: column; } .reservation-card-actions { align-items: start; gap: 16px; } }

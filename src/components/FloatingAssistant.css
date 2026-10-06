@@ -1,0 +1,12 @@
+.floating-assistant { position: fixed; right: calc(var(--space-6) + 52px); bottom: var(--space-6); z-index: 80; }
+.chat-launcher { display: block; height: 40px; margin-left: auto; border: 0; border-radius: var(--radius-pill); padding: 0 18px; background: var(--color-green-deep); color: var(--color-surface); cursor: pointer; box-shadow: 0 6px 24px #0002; }
+.floating-chat { width: min(420px, calc(100vw - 32px)); max-height: min(650px, calc(100dvh - var(--header-height, 120px) - 90px)); overflow: auto; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 12px 48px #0003; margin-bottom: 12px; }
+.floating-chat-bar { position: sticky; top: 0; background: var(--color-green-pale); padding: 16px; display: flex; justify-content: space-between; z-index: 2; }
+.floating-chat-bar button { border: 0; background: none; cursor: pointer; }
+.floating-chat .assistant-page { padding: 20px; }
+.floating-chat .assistant-heading h1 { font-size: 22px; }
+.floating-chat .assistant-products { grid-template-columns: 1fr 1fr; }
+.floating-chat .product-card-image { height: 90px; aspect-ratio: auto; }
+.floating-chat .assistant-form > div { display: flex; }
+.floating-chat .assistant-form input { min-width: 0; }
+@media(max-width:600px) { .floating-assistant { right: 68px; bottom: 20px; } }

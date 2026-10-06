@@ -1,0 +1,134 @@
+.checkout {
+  padding: var(--space-4) 0;
+}
+
+.checkout-body {
+  display: flex;
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.checkout-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.checkout-section {
+  margin-bottom: var(--space-6);
+}
+
+/* 절 제목 아래 선만 진하게 남긴다 (테두리 최소) */
+.checkout-section-title {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  font-size: 16px;
+  margin: 0 0 var(--space-4) 0;
+  padding-bottom: var(--space-2);
+}
+
+.checkout-input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 15px;
+  padding: var(--space-3);
+  width: 100%;
+}
+
+
+.checkout-input:disabled {
+  background-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+.checkout-summary {
+  position: sticky;
+  top: calc(var(--header-height, 120px) + 16px);
+  align-self: flex-start;
+  border-top: 2px solid var(--color-heading);
+  flex-shrink: 0;
+  padding: var(--space-4) 0 0 0;
+  width: 300px;
+}
+
+.checkout-summary-title {
+  color: var(--color-heading);
+  font-size: 16px;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.checkout-save-error {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-weight: 600;
+  margin: 0 0 var(--space-4) 0;
+  padding: var(--space-3);
+}
+
+.checkout-actions {
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-2);
+  justify-content: flex-end;
+  padding-top: var(--space-5);
+}
+
+.checkout-back {
+  color: var(--color-text-weak);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1.2;
+  min-height: 48px;
+  padding: 8px;
+  font-size: 13px;
+  text-align: center;
+  word-break: keep-all;
+  border: 1px solid var(--color-border);
+}
+
+.checkout-back:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}
+
+/* 주요 버튼은 검정이다 */
+.checkout-submit {
+  background-color: var(--color-heading);
+  border: 1px solid var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 48px;
+  min-width: 0;
+  flex: 1;
+  padding: var(--space-3);
+}
+
+/* 토큰에 없는 색은 filter: brightness() 로 낸다 */
+.checkout-submit:hover {
+  filter: brightness(0.94);
+}
+
+/* 처리 중에는 비활성화해 중복 제출을 막는다 */
+.checkout-submit:disabled {
+  background-color: var(--color-border);
+  border-color: var(--color-border);
+  color: var(--color-text-weak);
+  cursor: not-allowed;
+}
+
+.checkout-validation-message { color: var(--color-error); font-size: 13px; margin: 0 0 16px; }
+@media (max-width: 700px), (max-height: 650px) {
+  .checkout-summary { position: static; }
+}
+@media (max-width: 700px) {
+  .checkout-body { flex-direction: column; }
+  .checkout-summary { width: 100%; }
+}

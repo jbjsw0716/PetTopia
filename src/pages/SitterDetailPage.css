@@ -1,0 +1,140 @@
+.sitter-detail {
+  max-width: 960px;
+  padding: var(--space-4) 0;
+}
+
+.sitter-detail-back {
+  color: var(--color-text-weak);
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: var(--space-4);
+}
+
+.sitter-detail-back:hover {
+  color: var(--color-heading);
+}
+
+.sitter-detail-profile {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.sitter-detail-photo {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-gray-pale);
+  flex-shrink: 0;
+  object-fit: cover;
+  width: 240px;
+}
+
+.sitter-detail-info {
+  flex: 1;
+}
+
+.sitter-detail-name {
+  margin: 0 0 var(--space-2) 0;
+}
+
+.sitter-detail-rating {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.sitter-detail-facts {
+  display: grid;
+  gap: var(--space-2) var(--space-4);
+  grid-template-columns: auto 1fr;
+  margin: 0;
+}
+
+.sitter-detail-facts dt {
+  color: var(--color-text-weak);
+  font-size: 14px;
+}
+
+.sitter-detail-facts dd {
+  color: var(--color-text);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* 예약서 확인으로 가는 버튼 — 주요 동작이라 검정 배경을 쓴다 (다른 화면의 제출 버튼과 같다) */
+.sitter-detail-book {
+  background-color: var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-6);
+}
+
+.sitter-detail-book:hover {
+  filter: brightness(0.94);
+}
+
+.sitter-detail-book-empty {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin-top: var(--space-4);
+}
+
+.sitter-detail-section {
+  margin-top: var(--space-6);
+}
+
+.sitter-detail-section-title {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: var(--space-3);
+}
+
+.sitter-detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sitter-detail-row {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-2);
+}
+
+.sitter-detail-price {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.sitter-detail-empty {
+  color: var(--color-text-weak);
+  margin: var(--space-4) 0;
+}
+
+.sitter-detail-reviews {
+  margin: 0;
+  padding: 0;
+}
+
+.sitter-detail-more {
+  border: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-5);
+}
+
+.sitter-detail-more:hover {
+  background-color: var(--color-heading);
+  color: var(--color-surface);
+}

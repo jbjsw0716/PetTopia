@@ -1,0 +1,56 @@
+.quantity-input {
+  display: inline-block;
+}
+
+.quantity-input-control {
+  align-items: stretch;
+  display: flex;
+}
+
+.quantity-input-step {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  width: 32px;
+}
+
+.quantity-input-step:first-child {
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.quantity-input-step:last-child {
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.quantity-input-step:hover:enabled {
+  border-color: var(--color-heading);
+  color: var(--color-heading);
+}
+
+.quantity-input-step:disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-weak);
+  cursor: not-allowed;
+}
+
+.quantity-input-field {
+  border: 1px solid var(--color-border);
+  border-left: 0;
+  border-right: 0;
+  font-family: inherit;
+  font-size: 14px;
+  padding: var(--space-2);
+  text-align: center;
+  width: 56px;
+}
+
+/* 오류가 없을 때도 자리를 비워 둔다 */
+.quantity-input-error {
+  color: var(--color-error);
+  font-size: 12px;
+  margin: var(--space-1) 0 0 0;
+  min-height: 18px;
+}

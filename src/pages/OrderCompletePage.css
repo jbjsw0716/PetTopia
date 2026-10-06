@@ -1,0 +1,86 @@
+.order-complete {
+  padding: var(--space-4) 0;
+}
+
+.order-complete-title {
+  margin-bottom: var(--space-5);
+}
+
+/* 상자 테두리 대신 옅은 바탕으로 자리를 알린다 (테두리 최소 · 평면) */
+.order-complete-meta {
+  background-color: var(--color-gray-pale);
+  margin: 0 0 var(--space-6) 0;
+  padding: var(--space-4);
+}
+
+.order-complete-meta-row {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.order-complete-term {
+  color: var(--color-text-weak);
+  flex-shrink: 0;
+  width: 88px;
+}
+
+.order-complete-desc {
+  margin: 0;
+}
+
+.order-complete-section {
+  flex: 1;
+  margin-bottom: var(--space-6);
+  min-width: 0;
+}
+
+.order-complete-section-title {
+  border-bottom: 1px solid var(--color-heading);
+  color: var(--color-heading);
+  font-size: 16px;
+  margin: 0 0 var(--space-4) 0;
+  padding-bottom: var(--space-2);
+}
+
+/* 배송 정보와 결제 금액을 좌우로 놓는다. 모바일 대응은 구현하지 않는다 */
+.order-complete-columns {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.order-complete-shipping {
+  margin: 0;
+}
+
+.order-complete-actions {
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+}
+
+/* 주요 버튼은 검정이다 (링크지만 역할은 같다) */
+.order-complete-orders {
+  background-color: var(--color-heading);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: var(--space-4) var(--space-6);
+}
+
+.order-complete-orders:hover {
+  filter: brightness(0.94);
+}
+
+.order-complete-continue {
+  color: var(--color-text-weak);
+}
+
+.order-complete-continue:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}

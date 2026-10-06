@@ -1,0 +1,63 @@
+/* 상품 카드와 같은 규칙이다 — 테두리 0 · 라운드 0 · 평면.
+   아래 선 하나만 남겨 가로로 늘어선 카드끼리 구분한다 */
+.sitter-card {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) 0;
+}
+
+.sitter-card:hover .sitter-card-name {
+  text-decoration: underline;
+}
+
+.sitter-card-body {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.sitter-card-image {
+  flex-shrink: 0;
+  height: 96px;
+  object-fit: cover;
+  width: 96px;
+}
+
+.sitter-card-image-empty {
+  background-color: var(--color-gray-pale);
+}
+
+.sitter-card-info {
+  flex: 1;
+}
+
+.sitter-card-name {
+  color: var(--color-heading);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sitter-card-region {
+  color: var(--color-text-weak);
+  font-size: 14px;
+  margin: var(--space-1) 0 var(--space-2) 0;
+}
+
+.sitter-card-detail {
+  display: grid;
+  gap: var(--space-1) var(--space-3);
+  grid-template-columns: auto 1fr;
+  margin: 0;
+}
+
+.sitter-card-term {
+  color: var(--color-text-weak);
+  font-size: 12px;
+}
+
+.sitter-card-desc {
+  color: var(--color-text);
+  font-size: 13px;
+  margin: 0;
+}
+
+.sitter-excellent { display: inline-flex; align-items: center; gap: 5px; margin: 0 0 10px; padding: 4px 8px; border-radius: var(--radius-pill); background: var(--color-green-pale); color: var(--color-green-strong); font-size: 11px; font-weight: 600; }
